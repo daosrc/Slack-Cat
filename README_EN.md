@@ -37,10 +37,23 @@ A simple yet powerful Chrome extension that enhances your Picture-in-Picture exp
 
 ## Keyboard Shortcuts
 
+### Windows/Linux:
 - `Alt + P`: Quick toggle Picture-in-Picture mode
-- `Space`: Play/Pause (when PiP window is focused)
-- `Up/Down Arrow`: Adjust volume (when PiP window is focused)
-- `Left/Right Arrow`: Fast forward/rewind (when PiP window is focused)
+- `Alt + Space`: Play/Pause
+- `Alt + Up/Down Arrow`: Adjust volume
+- `Alt + Left/Right Arrow`: Fast forward/rewind
+
+### macOS:
+- `Command + Shift + P`: Quick toggle Picture-in-Picture mode
+- `Command + Shift + Space`: Play/Pause
+- `Command + Shift + Up/Down Arrow`: Adjust volume
+- `Command + Shift + Left/Right Arrow`: Fast forward/rewind
+
+Note: You can customize these shortcuts in Chrome's extension shortcuts settings:
+1. Visit `chrome://extensions/shortcuts`
+2. Find "PiP Enhancement" extension
+3. Click the input field for each function
+4. Press your desired key combination
 
 ## Important Notes
 

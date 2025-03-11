@@ -1,13 +1,13 @@
 {
-  "manifest_version": 3,
-  "name": "Slack Cat Chrome Video Extension",
-  "description": "摸鱼神器，在小窗画中画模式下播放网页中的音视频内容",
+  "manifest_version": 2,
+  "name": "PiP Enhancement",
   "version": "1.0",
+  "description": "Enhanced Picture-in-Picture mode with playback controls",
   "permissions": [
     "activeTab",
-    "scripting"
+    "tabs"
   ],
-  "action": {
+  "browser_action": {
     "default_popup": "popup.html",
     "default_icon": {
       "16": "images/icon16.png",
@@ -20,13 +20,58 @@
     "48": "images/icon48.png",
     "128": "images/icon128.png"
   },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["content.js"]
     }
   ],
-  "background": {
-    "service_worker": "background.js"
+  "commands": {
+    "toggle-pip": {
+      "suggested_key": {
+        "default": "Alt+P",
+        "mac": "Command+Shift+P"
+      },
+      "description": "Toggle Picture-in-Picture mode"
+    },
+    "play-pause": {
+      "suggested_key": {
+        "default": "Alt+Space",
+        "mac": "Command+Shift+Space"
+      },
+      "description": "Play/Pause video"
+    },
+    "volume-up": {
+      "suggested_key": {
+        "default": "Alt+Up",
+        "mac": "Command+Shift+Up"
+      },
+      "description": "Increase volume"
+    },
+    "volume-down": {
+      "suggested_key": {
+        "default": "Alt+Down",
+        "mac": "Command+Shift+Down"
+      },
+      "description": "Decrease volume"
+    },
+    "seek-forward": {
+      "suggested_key": {
+        "default": "Alt+Right",
+        "mac": "Command+Shift+Right"
+      },
+      "description": "Seek forward"
+    },
+    "seek-backward": {
+      "suggested_key": {
+        "default": "Alt+Left",
+        "mac": "Command+Shift+Left"
+      },
+      "description": "Seek backward"
+    }
   }
 }
